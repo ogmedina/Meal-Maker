@@ -3,10 +3,16 @@ var searchBarElement = $("#searchBar")
 
 
 //global variables
-var globalDrinksArray = []; //maybe
+var globalDrinksArray = []; 
 var query = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
 //event listeners
+$("#resultsContainer").on('click', function(event){
+    event.preventDefault();
+    if(event.target.matches('.favoriteButton')){
+        addToFavorites(globalDrinksArray[event.target.dataset.index])
+    }
+})
 
 $("#searchButton").on("click", function (event) {
     event.preventDefault();
@@ -14,11 +20,27 @@ $("#searchButton").on("click", function (event) {
     if (searchBarElement.val() === '') {
         return;
     }
-
     var queryURL = query + searchBarElement.val();
-
     searchDrink(queryURL);
 })
+
+// functions
+function addToFavorites(drinkObj){
+    console.log(drinkObj)
+
+    var test = localStorage.getItem('drinks')
+    if(quickNull(test)){
+        //there is no local storage 'drinks'
+        var array = [];
+        array.push(drinkObj)
+        localStorage.setItem('drinks', JSON.stringify(array));
+    }else{
+        //there is a local storage item 'drinks'
+        var dataArray = JSON.parse(localStorage.getItem('drinks'))
+        dataArray.push(drinkObj)
+        localStorage.setItem('drinks', JSON.stringify(dataArray))
+    }
+}
 
 function searchDrink(queryURL) {
     $.ajax({
@@ -29,7 +51,7 @@ function searchDrink(queryURL) {
         $('#resultsContainer').prepend('<hr>')
         var drinksArray = response.drinks
         console.log(drinksArray)
-
+        globalDrinksArray = drinksArray
         for (var i = 0; i < drinksArray.length; i++) {
             var newRow = $("<div></div>")
             newRow.attr('class', 'rowContainer')
@@ -72,7 +94,12 @@ function searchDrink(queryURL) {
 
 
             newRow.append(description)
+            var newBtn = $('<button>Favorite</button>')
+            newBtn.attr('class', 'button favoriteButton');
+            newBtn.attr('data-index', i)
+            
             $("#resultsContainer").append(newRow)
+            $('#resultsContainer').append(newBtn)
             $("#resultsContainer").append('<hr>')
         }
 
@@ -103,8 +130,6 @@ function quickNull(x){
 // name strIngredient(x) and strMeasure(x) respectively, where (x) is a number. Since I 
 // could not find a way to loop through the object itself dynamically, I had to check each
 // object variable manually
-
-// TODO: I think i can redo this with recursion
 
 function gatherIngredients(drinkBlock){
     var ingredientToMeasureArray = [];
