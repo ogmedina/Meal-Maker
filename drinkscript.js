@@ -4,6 +4,7 @@ var searchBarElement = $("#searchBar")
 
 //global variables
 var globalDrinksArray = []; 
+var globalIngredientsArray = [];
 var query = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
 //event listeners
@@ -31,14 +32,30 @@ function addToFavorites(drinkObj){
     if(quickNull(test)){
         //there is no local storage 'drinks'
         var array = [];
-        array.push(drinkObj)
+
+        var formattedDrinkObject = formatObject(drinkObj)
+
+        array.push(formattedDrinkObject)
         localStorage.setItem('drinks', JSON.stringify(array));
     }else{
+
         //there is a local storage item 'drinks'
         var dataArray = JSON.parse(localStorage.getItem('drinks'))
-        dataArray.push(drinkObj)
+        var formattedDrinkObj = formatObject(drinkObj)
+        dataArray.push(formattedDrinkObj)
         localStorage.setItem('drinks', JSON.stringify(dataArray))
     }
+}
+
+function formatObject(object){
+
+    var newObject = {
+        name: object.strDrink,
+        ingArray: globalIngredientsArray,
+        instructions: object.strInstructions,
+        image: object.strDrinkThumb
+    }
+    return newObject
 }
 
 function searchDrink(queryURL) {
@@ -80,7 +97,9 @@ function searchDrink(queryURL) {
            
             //ingredients
             description.append('<span>Ingredients:</span><br>')
+            // console.log(drinksArray)
             var ingredientsArray = gatherIngredients(drinksArray[i]);
+            globalIngredientsArray = ingredientsArray;
             for(var j = 0; j < ingredientsArray.length; j++){
                 var string = ingredientsArray[j].measure
                 if(ingredientsArray[j].measure == null){
@@ -133,6 +152,7 @@ function quickNull(x){
 // name strIngredient(x) and strMeasure(x) respectively, where (x) is a number. Since I 
 // could not find a way to loop through the object itself dynamically, I had to check each
 // object variable manually
+// Alex wisdom, change dot notation to array:  //measure = drinkBlock["strMeasure"+ i]
 
 function gatherIngredients(drinkBlock){
     var ingredientToMeasureArray = [];
@@ -233,6 +253,7 @@ function gatherIngredients(drinkBlock){
 
     ingredient = drinkBlock.strIngredient14
     measure = drinkBlock.strMeasure14
+   
     
     if(!quickNull(ingredient)){
         ingredientToMeasureArray.push(createObject(ingredient, measure));
@@ -246,8 +267,10 @@ function gatherIngredients(drinkBlock){
     } 
 
     // END ***************************************************************************
-
+    //console.log(ingredientToMeasureArray);
     return ingredientToMeasureArray;
+
+    // [.strIngredient + 'x']
 }
 
 
