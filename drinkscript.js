@@ -26,7 +26,6 @@ $("#searchButton").on("click", function (event) {
 
 // functions
 function addToFavorites(drinkObj){
-    console.log(drinkObj)
 
     var test = localStorage.getItem('drinks')
     if(quickNull(test)){
@@ -50,7 +49,11 @@ function searchDrink(queryURL) {
         $('#resultsContainer').empty();
         $('#resultsContainer').prepend('<hr>')
         var drinksArray = response.drinks
-        console.log(drinksArray)
+
+        if(quickNull(drinksArray)){
+            $('#resultsContainer').append('<h3>Sorry, no results were found with your search :(</h3>')
+            return
+        }
         globalDrinksArray = drinksArray
         for (var i = 0; i < drinksArray.length; i++) {
             var newRow = $("<div></div>")
