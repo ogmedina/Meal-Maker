@@ -146,128 +146,132 @@ function quickNull(x){
     }
 }
 
-
-// gatherIngredients() takes an index of an array containing drink information
-// for lack of knowledge of a better way, there are 15 ingredient -> measure variables
-// name strIngredient(x) and strMeasure(x) respectively, where (x) is a number. Since I 
-// could not find a way to loop through the object itself dynamically, I had to check each
-// object variable manually
-// Alex wisdom, change dot notation to array:  //measure = drinkBlock["strMeasure"+ i]
-
+// gatherIngredients puts ingredients of a drink into a usable array
 function gatherIngredients(drinkBlock){
     var ingredientToMeasureArray = [];
     var ingredient;
     var measure;
 
     // start of large repeated code :C **********************************************
-    ingredient = drinkBlock.strIngredient1
-    measure = drinkBlock.strMeasure1
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+    for( var i = 1; i <= 15; i++){
+        ingredient = drinkBlock["strIngredient" + i]
+        measure = drinkBlock["strMeasure" + i]
+
+        if(!quickNull(ingredient)){
+            ingredientToMeasureArray.push(createObject(ingredient,measure))
+        }
+
+    }
+
+    // ingredient = drinkBlock.strIngredient1
+    // measure = drinkBlock.strMeasure1
+
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
     
-    ingredient = drinkBlock.strIngredient2
-    measure = drinkBlock.strMeasure2
+//     ingredient = drinkBlock.strIngredient2
+//     measure = drinkBlock.strMeasure2
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
     
-    ingredient = drinkBlock.strIngredient3
-    measure = drinkBlock.strMeasure3
+//     ingredient = drinkBlock.strIngredient3
+//     measure = drinkBlock.strMeasure3
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
-    ingredient = drinkBlock.strIngredient4
-    measure = drinkBlock.strMeasure4
+//     ingredient = drinkBlock.strIngredient4
+//     measure = drinkBlock.strMeasure4
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
-    ingredient = drinkBlock.strIngredient5
-    measure = drinkBlock.strMeasure5
+//     ingredient = drinkBlock.strIngredient5
+//     measure = drinkBlock.strMeasure5
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
-    ingredient = drinkBlock.strIngredient6
-    measure = drinkBlock.strMeasure6
+//     ingredient = drinkBlock.strIngredient6
+//     measure = drinkBlock.strMeasure6
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
-    ingredient = drinkBlock.strIngredient7
-    measure = drinkBlock.strMeasure7
+//     ingredient = drinkBlock.strIngredient7
+//     measure = drinkBlock.strMeasure7
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
-    ingredient = drinkBlock.strIngredient8
-    measure = drinkBlock.strMeasure8
+//     ingredient = drinkBlock.strIngredient8
+//     measure = drinkBlock.strMeasure8
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
-    ingredient = drinkBlock.strIngredient9
-    measure = drinkBlock.strMeasure9
+//     ingredient = drinkBlock.strIngredient9
+//     measure = drinkBlock.strMeasure9
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
-    ingredient = drinkBlock.strIngredient10
-    measure = drinkBlock.strMeasure10
+//     ingredient = drinkBlock.strIngredient10
+//     measure = drinkBlock.strMeasure10
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
-    ingredient = drinkBlock.strIngredient11
-    measure = drinkBlock.strMeasure11
+//     ingredient = drinkBlock.strIngredient11
+//     measure = drinkBlock.strMeasure11
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
-    ingredient = drinkBlock.strIngredient12
-    measure = drinkBlock.strMeasure12
+//     ingredient = drinkBlock.strIngredient12
+//     measure = drinkBlock.strMeasure12
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
-    ingredient = drinkBlock.strIngredient13
-    measure = drinkBlock.strMeasure13
+//     ingredient = drinkBlock.strIngredient13
+//     measure = drinkBlock.strMeasure13
 
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
-    ingredient = drinkBlock.strIngredient14
-    measure = drinkBlock.strMeasure14
+//     ingredient = drinkBlock.strIngredient14
+//     measure = drinkBlock.strMeasure14
    
     
-    if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//     if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
-    ingredient = drinkBlock.strIngredient15
-    measure = drinkBlock.strMeasure15
+//     ingredient = drinkBlock.strIngredient15
+//     measure = drinkBlock.strMeasure15
 
-   if(!quickNull(ingredient)){
-        ingredientToMeasureArray.push(createObject(ingredient, measure));
-    } 
+//    if(!quickNull(ingredient)){
+//         ingredientToMeasureArray.push(createObject(ingredient, measure));
+//     } 
 
     // END ***************************************************************************
-    //console.log(ingredientToMeasureArray);
+    console.log(ingredientToMeasureArray);
     return ingredientToMeasureArray;
 
     // [.strIngredient + 'x']
