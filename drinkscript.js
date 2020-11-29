@@ -38,7 +38,7 @@ function addToFavorites(drinkObj, index){
 
         array.push(formattedDrinkObject)
         localStorage.setItem('drinks', JSON.stringify(array));
-        console.log(array)
+        // console.log(array)
     }else{
 
         //there is a local storage item 'drinks'
@@ -46,15 +46,12 @@ function addToFavorites(drinkObj, index){
         var formattedDrinkObj = formatObject(drinkObj, index)
         dataArray.push(formattedDrinkObj)
         localStorage.setItem('drinks', JSON.stringify(dataArray))
-        console.log(dataArray)
+        // console.log(dataArray)
     }
 }
 
 function formatObject(object, index){
-    
     var tempArray = globalIngredientsArray[index]
-    console.log( 'temp array ' + tempArray)
-
 
     var newObject = {
         name: object.strDrink,
@@ -170,6 +167,6 @@ function gatherIngredients(drinkBlock){
 
     }
 
-    console.log(ingredientToMeasureArray);
+    // console.log(ingredientToMeasureArray);
     return ingredientToMeasureArray;
 }
