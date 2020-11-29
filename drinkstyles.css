@@ -7,6 +7,10 @@ img{
 
 }
 
+body {
+    background-color: gray;
+}
+
 h2 {
     text-decoration: underline;
 }
@@ -34,6 +38,7 @@ span {
 
 .rowContainer {
     margin-bottom: 10px;
+    background-color: white;
 }
 
 .drinkInfo {
