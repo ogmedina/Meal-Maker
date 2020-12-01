@@ -4,24 +4,21 @@ main {
     padding-top: 25px;
 }
 
-
 body {
     background-color: gray;
 }
 
-.menu {
-    background: #333;
-}
-
 /*  Found on CSS tricks*/
+
 hr.style-eight {
-    overflow: visible; 
+    overflow: visible;
     padding: 0;
     border: none;
     border-top: medium double white;
     color: white;
     text-align: center;
 }
+
 hr.style-eight:after {
     content: "§";
     display: inline-block;
@@ -32,10 +29,13 @@ hr.style-eight:after {
     background: gray;
 }
 
+.menu {
+    background: #333;
+}
 
 .callout {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     color: whitesmoke;
     margin-bottom: 0;
 }
@@ -55,18 +55,15 @@ hr.style-eight:after {
 }
 
 #bodyDescription, #titleDescription {
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-#indexBody{
+#indexBody {
     margin-top: 50px;
     margin-bottom: 50px;
     background-color: white;
-    border: 2px dashed black; 
+    border: 2px dashed black;
     padding: 15px;
     border-radius: 5px;
 }
-
-
-
