@@ -1,3 +1,14 @@
+main {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+}
+
+
+body {
+    background-color: gray;
+}
+
 .menu {
     background: #333;
 }
@@ -6,6 +17,7 @@
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     color: white;
+    margin-bottom: 0;
 }
 
 .button {
@@ -15,6 +27,28 @@
 .food-pic1 {
     width: 100%;
 }
+
+#mainHeading {
+    text-decoration: underline;
+    font-size: 45px;
+}
+
+#titleDescription {
+    font-size: 16px;
+}
+
+#bodyDescription {
+    font-size: 16px;
+}
+
+#indexBody{
+    margin-top: 50px;
+    background-color: white;
+    /* border: 3px dashed black; */
+    padding: 15px;
+    border-radius: 5px;
+}
+
 
 
 /* #title {
