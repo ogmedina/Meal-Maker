@@ -8,10 +8,20 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="drinkstyles.css">
+    <script src="https://kit.fontawesome.com/c12744a8a6.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
+    <header>
+        <div class="callout large">
+        <div class="row column text-center">
+            <h1><span id="mainHeading">Meal Maker</span></h1>
+            <p id="titleDescription">A place to find recipes for your favorite dishes and mixed drinks</p>
+        </div>
+    </div>
+    </header>
+
     <ul class="menu expanded text-center">
         <li><a href="index.html">Home</a></li>
         <li><a href="food.html">Food</a></li>
@@ -22,16 +32,16 @@
     <div>
         <main>
             <div class="grid-x grid-padding-x">
-                <div class="large-2 medium-2 cell"></div>
-                <div class="large-8 medium-8 cell">
+                
+                <div class="large-12 medium-12 cell" id="initialItemsContainer">
 
-                    <!-- Grid Example -->
+                   
                     <div class="grid-x grid-padding-x">
                         <div class="large-12 cell">
-                            <div class="primary callout" id="pageInstructions">
+                            <div id="pageInstructions">
                                 <h2>Drink Finder</h2>
                                 <h4>Welcome to the Drink Finder Section of Meal Maker!</h4>
-                                <p>Below is a search bar, enter a keyword or two to
+                                <p>Below is a search bar, enter a keyword or drink name to
                                     search for some drink recipes to make after a long days work!</p>
                                 <p>Here are some examples to get you started:
                                     <br>Rum, Sour, Martini, Whiskey, and White Russian.</p>
