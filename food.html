@@ -6,190 +6,179 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aea67d5f69.js" crossorigin="anonymous"></script>
     <title>Food</title>
 </head>
 <body>
-    <header>
+    <header>      
     <ul class="menu expanded text-center">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="food.html">Food</a></li>
-        <li><a href="drinks.html">Drinks</a></li>
-        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="index.html" style = "color:white;" >Home</a></li>
+        <li><a href="food.html" style = "color:white;">Food</a></li>
+        <li><a href="drinks.html" style = "color:white;">Drinks</a></li>
+        <li><a href="favorites.html" style = "color:white;">Favorites</a></li>
       </ul>
+      
     </header>  
 
     <!-- Main 'jumbotron' of page -->
-    <div class="callout large">
-        <div class="row column text-center">
+    <div class="callout large mainHeader">
+        <div class="row column text-center mainText">
           <h1>Meal Maker</h1>
-          <p class="lead">Seach for your food, and find the ingredients and reciepes</p>
-          <a href="drinks.html" class="button large">Adult Beverages!</a>
-          <a href="favorites.html" class="button large">Your Favorites</a>
-          <a href="index.html" class="button large hollow">Home</a>
+          <p class="lead">Seach for your food, and find the ingredients and recipes</p>          
         </div>
       </div>
 
       <!-- Results ONE go here -->
-
-      <div class = "grid-x" id = "menu">
-        <div class = "cell small-12 medium-5">
+      <div id="resultsContainer">
+      <div class = "grid-x" id = "menu0">
+        <div class = "cell small-12 medium-5 text-center">
             <div id = "food-pic0" class = thumbnail></div>
         </div>
         <div class="cell small-12 medium-7">
-            <div id = "ingredientSection0">
+            <div id = "ingredientSection0"></div>
               <ul>
                 <div id = "ingredients0">                  
                 </div>                
-              </ul>
-            </div>
+              </ul>            
             <div id = "saveBtn0"></div>
         </div>
     </div>
 
   <!-- Results TWO go here -->
-    <div class = "grid-x" id = "menu">
-        <div class = "cell small-12 medium-5">
+    <div class = "grid-x" id = "menu1">
+        <div class = "cell small-12 medium-5 text-center">
             <div id = "food-pic1" class = thumbnail></div>
         </div>
         <div class="cell small-12 medium-7">
-            <div id = "ingredientSection1">
+            <div id = "ingredientSection1"></div>
               <ul>
                 <div id = "ingredients1">                  
                 </div>                
-              </ul>
-            </div>
+              </ul>            
             <div id = "saveBtn1"></div>
         </div>
     </div>
 
    <!-- Results THREE go here -->
-          <div class = "grid-x" id = "menu">
-            <div class = "cell small-12 medium-5">
+          <div class = "grid-x" id = "menu2">
+            <div class = "cell small-12 medium-5 text-center">
                 <div id = "food-pic2" class = thumbnail></div>
             </div>
             <div class="cell small-12 medium-7">
-                <div id = "ingredientSection2">
+                <div id = "ingredientSection2"></div>
                   <ul>
                     <div id = "ingredients2">                  
                     </div>                
-                  </ul>
-                </div>
+                  </ul>                
                 <div id = "saveBtn2"></div>
             </div>
         </div>
 
    <!-- Results FOUR go here -->
-          <div class = "grid-x" id = "menu">
-            <div class = "cell small-12 medium-5">
+          <div class = "grid-x" id = "menu3">
+            <div class = "cell small-12 medium-5 text-center">
                 <div id = "food-pic3" class = thumbnail></div>
             </div>
             <div class="cell small-12 medium-7">
-                <div id = "ingredientSection3">
+                <div id = "ingredientSection3"></div>
                   <ul>
                     <div id = "ingredients3">                  
                     </div>                
-                  </ul>
-                </div>
+                  </ul>                
                 <div id = "saveBtn3"></div>
             </div>
         </div>
 
   <!-- Results FIVE go here -->
-  <div class = "grid-x" id = "menu">
-    <div class = "cell small-12 medium-5">
+  <div class = "grid-x" id = "menu4">
+    <div class = "cell small-12 medium-5 text-center">
         <div id = "food-pic4" class = thumbnail></div>
     </div>
     <div class="cell small-12 medium-7">
-        <div id = "ingredientSection4">
+        <div id = "ingredientSection4"></div>
           <ul>
             <div id = "ingredients4">                  
             </div>                
-          </ul>
-        </div>
+          </ul>        
         <div id = "saveBtn4"></div>
     </div>
 </div>
 
   <!-- Results SIX go here -->
-  <div class = "grid-x" id = "menu">
-    <div class = "cell small-12 medium-5">
+  <div class = "grid-x" id = "menu5">
+    <div class = "cell small-12 medium-5 text-center">
         <div id = "food-pic5" class = thumbnail></div>
     </div>
     <div class="cell small-12 medium-7">
-        <div id = "ingredientSection5">
+        <div id = "ingredientSection5"></div>
           <ul>
             <div id = "ingredients5">                  
             </div>                
-          </ul>
-        </div>
+          </ul>        
         <div id = "saveBtn5"></div>
     </div>
 </div>
 
 <!-- Results SEVEN go here -->
-<div class = "grid-x" id = "menu">
-  <div class = "cell small-12 medium-5">
+<div class = "grid-x" id = "menu6">
+  <div class = "cell small-12 medium-5 text-center">
       <div id = "food-pic6" class = thumbnail></div>
   </div>
   <div class="cell small-12 medium-7">
-      <div id = "ingredientSection6">
+      <div id = "ingredientSection6"></div>
         <ul>
           <div id = "ingredients6">                  
           </div>                
-        </ul>
-      </div>
+        </ul>      
       <div id = "saveBtn6"></div>
   </div>
 </div>
 
 <!-- Results EIGHT go here -->
-<div class = "grid-x" id = "menu">
-  <div class = "cell small-12 medium-5">
+<div class = "grid-x" id = "menu7">
+  <div class = "cell small-12 medium-5 text-center">
       <div id = "food-pic7" class = thumbnail></div>
   </div>
   <div class="cell small-12 medium-7">
-      <div id = "ingredientSection7">
+      <div id = "ingredientSection7"></div>
         <ul>
           <div id = "ingredients7">                  
           </div>                
-        </ul>
-      </div>
+        </ul>      
       <div id = "saveBtn7"></div>
   </div>
 </div>
 
 <!-- Results NINE go here -->
-<div class = "grid-x" id = "menu">
-  <div class = "cell small-12 medium-5">
+<div class = "grid-x" id = "menu8">
+  <div class = "cell small-12 medium-5 text-center">
       <div id = "food-pic8" class = thumbnail></div>
   </div>
   <div class="cell small-12 medium-7">
-      <div id = "ingredientSection8">
+      <div id = "ingredientSection8"></div>
         <ul>
           <div id = "ingredients8">                  
           </div>                
-        </ul>
-      </div>
+        </ul>      
       <div id = "saveBtn8"></div>
   </div>
 </div>
 
 <!-- Results TEN go here -->
-<div class = "grid-x" id = "menu">
-  <div class = "cell small-12 medium-5">
+<div class = "grid-x" id = "menu9">
+  <div class = "cell small-12 medium-5 text-center">
       <div id = "food-pic9" class = thumbnail></div>
   </div>
   <div class="cell small-12 medium-7">
-      <div id = "ingredientSection9">
+      <div id = "ingredientSection9"></div>
         <ul>
           <div id = "ingredients9">                  
           </div>                
-        </ul>
-      </div>
+        </ul>      
       <div id = "saveBtn9"></div>
   </div>
 </div>
-
+      </div>
 
     <!-- First thing users see when they get to the page  -->
     <div class = "grid-x">      
