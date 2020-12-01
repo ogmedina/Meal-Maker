@@ -30,15 +30,13 @@ $("#searchButton").on("click", function (event) {
 function addToFavorites(drinkObj, index){
 
     var test = localStorage.getItem('drinks')
+    
     if(quickNull(test)){
         //there is no local storage 'drinks'
         var array = [];
-
         var formattedDrinkObject = formatObject(drinkObj, index)
-
         array.push(formattedDrinkObject)
         localStorage.setItem('drinks', JSON.stringify(array));
-        // console.log(array)
     }else{
 
         //there is a local storage item 'drinks'
@@ -46,7 +44,6 @@ function addToFavorites(drinkObj, index){
         var formattedDrinkObj = formatObject(drinkObj, index)
         dataArray.push(formattedDrinkObj)
         localStorage.setItem('drinks', JSON.stringify(dataArray))
-        // console.log(dataArray)
     }
 }
 
@@ -101,7 +98,6 @@ function searchDrink(queryURL) {
            
             //ingredients
             description.append('<span>Ingredients:</span><br>')
-            // console.log(drinksArray)
             var ingredientsArray = gatherIngredients(drinksArray[i]);
             globalIngredientsArray.push(ingredientsArray);
             for(var j = 0; j < ingredientsArray.length; j++){
@@ -120,14 +116,12 @@ function searchDrink(queryURL) {
 
 
             newRow.append(description)
-            var newBtn = $('<button>Favorite</button>')
+            var newBtn = $('<button><i class="fas fa-heart"></i></button>')
             newBtn.attr('class', 'button favoriteButton');
             newBtn.attr('data-index', i)
             
             $(newRow).append(newBtn)
             $("#resultsContainer").append(newRow)
-            
-            $("#resultsContainer").append('<hr>')
         }
 
     })
@@ -161,12 +155,10 @@ function gatherIngredients(drinkBlock){
         ingredient = drinkBlock["strIngredient" + i]
         measure = drinkBlock["strMeasure" + i]
 
-        if(!quickNull(ingredient)){
+        if(!quickNull(ingredient) && ingredient != ''){
             ingredientToMeasureArray.push(createObject(ingredient,measure))
         }
 
     }
-
-    // console.log(ingredientToMeasureArray);
     return ingredientToMeasureArray;
 }
