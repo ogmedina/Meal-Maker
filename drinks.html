@@ -7,11 +7,26 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- My CSS -->
     <link rel="stylesheet" href="drinkstyles.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c12744a8a6.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
+    <header>
+        <div class="callout large">
+            <div class="row column text-center">
+                <h1><span id="mainHeading">Meal Maker</span></h1>
+                <p id="titleDescription">A place to find recipes for your favorite dishes and mixed drinks</p>
+            </div>
+        </div>
+    </header>
+
     <ul class="menu expanded text-center">
         <li><a href="index.html">Home</a></li>
         <li><a href="food.html">Food</a></li>
@@ -22,32 +37,30 @@
     <div>
         <main>
             <div class="grid-x grid-padding-x">
-                <div class="large-2 medium-2 cell"></div>
-                <div class="large-8 medium-8 cell">
 
-                    <!-- Grid Example -->
+                <div class="large-12 medium-12 cell" id="initialItemsContainer">
+
+
                     <div class="grid-x grid-padding-x">
                         <div class="large-12 cell">
-                            <div class="primary callout" id="pageInstructions">
-                                <h2>Drink Finder</h2>
-                                <h4>Welcome to the Drink Finder Section of Meal Maker!</h4>
-                                <p>Below is a search bar, enter a keyword or two to
-                                    search for some drink recipes to make after a long days work!</p>
-                                <p>Here are some examples to get you started:
+                            <div id="pageInstructions">
+                                <h2 id="drinkHeading">Drink Finder</h2>
+                                <h4 id="drinkSubheading">Welcome to the Drink Finder Section of Meal Maker!</h4>
+                                <p class="drinkPageDescription">Below is a search bar, enter a keyword or drink name to
+                                    search for some drink recipes to make after a long day of hard work!</p>
+                                <p class="drinkPageDescription">Here are some examples to get you started:
                                     <br>Rum, Sour, Martini, Whiskey, and White Russian.</p>
 
                             </div>
                         </div>
                     </div>
-
-                    <h5>Search:</h5>
+                    <hr id="headerSeperator">
                     <form>
                         <div class="grid-x grid-padding-x">
-                            <div class="large-8 medium-8 small-8 cell">
-                                <!-- <label>Input Label</label> -->
-                                <input id="searchBar" type="text" placeholder="Drink Name">
+                            <div class="large-4 medium-6 small-8 cell float-center">
+                                <input id="searchBar" type="text" placeholder="Drink Name/keyword">
                             </div>
-                            <div class="large-4 medium-4 small-4 cell">
+                            <div class="large-2 medium-4 small-4 cell float-center">
                                 <button id="searchButton" class="button">Search!</button>
                             </div>
                         </div>
