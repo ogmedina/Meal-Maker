@@ -1,11 +1,42 @@
+main {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+}
+
+body {
+    background-color: gray;
+}
+
+/*  Found on CSS tricks*/
+hr.style-eight {
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double white;
+    color: white;
+    text-align: center;
+}
+
+hr.style-eight:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.9em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: gray;
+}
+
 .menu {
     background: #333;
 }
 
 .callout {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    color: white;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: whitesmoke;
+    margin-bottom: 0;
 }
 
 .button {
@@ -16,16 +47,22 @@
     width: 100%;
 }
 
+#mainHeading {
+    text-decoration: underline;
+    font-size: 45px;
+    font-family: 'Raleway', sans-serif;
+}
 
-/* #title {
-    font-weight: bold;
-} */
+#bodyDescription, #titleDescription {
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
 
-/*#menu { 
-     display: none;
-} */
-
-
-
-
-
+#indexBody {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: white;
+    border: 2px dashed black;
+    padding: 15px;
+    border-radius: 5px;
+}
