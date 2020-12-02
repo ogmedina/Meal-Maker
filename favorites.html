@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/favorites.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap" rel="stylesheet">
@@ -15,23 +16,21 @@
 
 <body>
 
-    <ul class="menu expanded text-center">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="food.html">Food</a></li>
-        <li><a href="drinks.html">Drinks</a></li>
-        <li><a href="favorites.html">Favorites</a></li>
-    </ul>
-
-    <div class="callout primary">
-        <div class="row column text-center heading">
-            <h1>Meal Maker</h1>
-            <h3 class="subheader">Favorites</h3>
-            <p class="aboutPage">
-                Welcome to the favorites page. On this page you will see all of your favorited food and
-                drinks<br><br>
-            </p>
+    <header>
+        <div class="callout large">
+            <div id="mainHeader" class="row column text-center">
+                <h1><span id="mainHeading">Meal Maker</span></h1>
+                <p id="titleDescription">Your personal favorites menu!</p>
+            </div>
         </div>
-    </div>
+    </header>
+
+    <ul class="menu expanded text-center">
+        <li><a href="index.html" style="color:white;">Home</a></li>
+        <li><a href="food.html" style="color:white;">Food</a></li>
+        <li><a href="drinks.html" style="color:white;">Drinks</a></li>
+        <li><a href="favorites.html" style="color:white;">Favorites</a></li>
+    </ul>
 
     <div class="grid-x grid-padding-x">
         <div class="large-6 medium-6 cell">
@@ -39,6 +38,9 @@
         </div>
         <div class="large-6 medium-6 cell">
             <h3><u>Favorite: Drinks</u></h3>
+        </div>
+        <div class="large-12 medium-6 cell">
+            <hr class="style-eight">
         </div>
         <div class="large-6 medium-6 cell">
             <div id="food"></div>
