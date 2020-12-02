@@ -22,7 +22,7 @@ function food() {
     newRow.append(ingredients)
     for (var j = 0; j < foodArray[i].ingredients.length; j++) {
       ingredientsItem = $("<ul></ul>")
-      ingredientsItem.attr('class', 'ingredientsItem')
+      ingredientsItem.attr('class', 'foodItem')
       ingredientsItem.text(foodArray[i].ingredients[j])
       ingredients.append(ingredientsItem)
     }

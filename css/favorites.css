@@ -81,10 +81,16 @@ button:active {
 	top:1px;
 }
 
-li{
+.ingredientsItem{
   
-  padding-left: 200px;
-}
+    padding-left: 200px;
+  }
 .instructions{
     float: l;
+    text-align: center;
+   
+}
+.foodItem{
+    padding-left: 170px;
+    
 }
