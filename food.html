@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="food.css">
     <script src="https://kit.fontawesome.com/aea67d5f69.js" crossorigin="anonymous"></script>
@@ -13,11 +15,12 @@
 <body>
 <header>
 <!-- Main 'jumbotron' of page -->        
-  <div class="callout large mainHeader">
-    <div class="row column text-center mainText">
-     <h1>Meal Maker</h1>
-       <p class="lead">Seach for your food, and find the ingredients and recipes</p>          
-    </div>
+  <div class="callout large">    
+      <div id = "mainHeader" class="row column text-center">
+          <h1 id="mainHeading">Meal Maker</h1>
+          <p id="titleDescription">A place to find recipes for your favorite dishes and mixed drinks</p>
+      </div>
+  </div>
   </div>
 </header>  
 <!-- NavBar of page -->
@@ -26,11 +29,7 @@
     <li><a href="food.html" style = "color:white;">Food</a></li>
     <li><a href="drinks.html" style = "color:white;">Drinks</a></li>
     <li><a href="favorites.html" style = "color:white;">Favorites</a></li>
-<<<<<<< HEAD
   </ul>     
-=======
-  </ul>      
->>>>>>> main
 <!-- Results ONE go here -->
   <div id="resultsContainer">
     <div class = "grid-x" id = "menu0">
@@ -41,7 +40,7 @@
        <div id = "ingredientSection0"></div>
          <ul>
        <div id = "ingredients0"></div>                
-        </ul>            
+        </ul>           
        <div id = "saveBtn0"></div>
       </div>
     </div>
