@@ -1,5 +1,5 @@
+//Global Array variable to save to local storage
 var globalFoodArray = [];
-var globalFoodIngredientsArray = [];
 
 //When document is ready, hide menu items
 $(document).ready(function(){
@@ -15,6 +15,7 @@ $(document).ready(function(){
     $("#menu9").hide();
 })
 
+//Function for when the food is typed out and clicked to search
 $("#foodSubmit").on("click", function(event){
     event.preventDefault();  
   //on foodSubmit click hide main menu
@@ -30,82 +31,68 @@ $("#foodSubmit").on("click", function(event){
     $("#menu7").show();
     $("#menu8").show();
     $("#menu9").show();
-   
+//makes the searched food a variable called foodIngredient
 var foodIngredient = $("#foodSearch").val();
+//URL including the APP ID and APP Key
 var queryURL = "https://api.edamam.com/search?q=" + foodIngredient +  "&app_id=3a94af5c&app_key=dcd84ae2c299d0440ebdbbe0b34bfb80"
 
 $.ajax({
     url: queryURL,
     method: "GET"
-}).then(function(response){
-   
+}).then(function(response){   
     console.log(response);
-    for (var i = 0; i < 10; i++){        
+    //Loop for 10 recipes to load on page
+    for (var i = 0; i < 10; i++){
+        //Saves picture and adds link to it and then appends the page        
         var foodPicture = response.hits[i].recipe.image;
         var foodPictureEl = $("<a href = " + response.hits[i].recipe.url + "><img src =" + foodPicture + "></a>");        
         $("#food-pic" + i).append(foodPictureEl);
+        //Saves recipe name from AJAX call and prepends it
         var recipeName = response.hits[i].recipe.label;
         $("#ingredientSection" + i).prepend(recipeName);
+        //this saves the recipe into a variable called ingredientARR
         var ingredientARR = response.hits[i].recipe.ingredientLines;
-        var ingredients = $("#ingredients" + i)        
+        var ingredients = $("#ingredients" + i)
+        //this creates a button using fontawesome <i> and adds a heart and color        
         var buttonEl = $("<i>");
         buttonEl.addClass("far fa-heart button alert");
         buttonEl.text(" Favorite");  
         buttonEl.attr("data-name", [i])              
         $("#saveBtn" + i).append(buttonEl);
 
-  
+        //this is a loop to create a list of ingredients and appends it
         for (var j = 0; j < ingredientARR.length; j++){                          
              var ingredientList = $("<li>" + ingredientARR[j] + "</li>");             
              ingredients.append(ingredientList);
          }
     }
-    console.log(response.hits[0].recipe.ingredientLines);
-    console.log(ingredientARR);    
-
-    $("#saveBtn0").on("click", function (e){
-        var name = $(e.target).data("name");
+    //console.log(response.hits[0].recipe.ingredientLines);
+    //console.log(ingredientARR);    
+    //this waits for a click in the results container to save the button into an object called savedRecipe
+    $("#resultsContainer").on("click", function (e){
+        var name = $(e.target).data("name"); 
         var savedRecipe = {
             name: response.hits[name].recipe.label,
             ingredients: response.hits[name].recipe.ingredientLines,
             link: response.hits[name].recipe.url,
             img: response.hits[name].recipe.image
-        };
-
-        function quickNull(x){
-            if(x == null){
-                return true;
-            }else{
-                return false;
-            }
-        }
-        
+        };           
+              
         addToFavorites();
-
+        //function to add to favorites for storage and other pages
         function addToFavorites(){
             var test = localStorage.getItem('food')
-            if(quickNull(test)){
+            console.log(test);
+            if(test === null){
                 var array = [];
-
-                array.push(globalFoodArray)
+                array.push(savedRecipe);                
                 localStorage.setItem('food', JSON.stringify(array));
             } else{
                 var globalFoodArray = JSON.parse(localStorage.getItem('food'));
                 globalFoodArray.push(savedRecipe);
                 localStorage.setItem('food', JSON.stringify(globalFoodArray));
             }
-
-        }
-
-        //var globalFoodArray = JSON.parse(localStorage.getItem('food'));
-        //globalFoodArray.push(savedRecipe);
-        //localStorage.setItem('food', JSON.stringify(globalFoodArray));
-
-
-
-        console.log(savedRecipe);
-        console.log("label : " + savedRecipe.name + " recipe : " + savedRecipe.ingredients + " sourceLink : " + savedRecipe.link);
-       
+        }       
     });
 });
 });
@@ -131,3 +118,11 @@ $.ajax({
 
 //});
 
+       //$("#saveBtn").removeClass("far fa-heart button alert");        
+        //$(this).addClass("far fa-heart button success");
+
+
+        
+        //var globalFoodArray = JSON.parse(localStorage.getItem('food'));
+        //globalFoodArray.push(savedRecipe);
+        //localStorage.setItem('food', JSON.stringify(globalFoodArray));
