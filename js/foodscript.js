@@ -53,10 +53,10 @@ $.ajax({
         //this saves the recipe into a variable called ingredientARR
         var ingredientARR = response.hits[i].recipe.ingredientLines;
         var ingredients = $("#ingredients" + i)
-        //this creates a button using fontawesome <i> and adds a heart and color        
-        var buttonEl = $("<i>");
-        buttonEl.addClass("far fa-heart button alert");
-        buttonEl.text(" Favorite");  
+        //this creates a button using fontawesome <i> and adds a heart and color   
+
+        var buttonEl = $('<button><i class = "fas fa-heart"></i></button>');
+        buttonEl.attr('class', 'button favoriteButton');         
         buttonEl.attr("data-name", [i])              
         $("#saveBtn" + i).append(buttonEl);
 
@@ -70,7 +70,7 @@ $.ajax({
     //console.log(ingredientARR);    
     //this waits for a click in the results container to save the button into an object called savedRecipe
     $("#resultsContainer").on("click", function (e){
-        var name = $(e.target).data("name"); 
+        var name = $(e.target).data("name");        
         var savedRecipe = {
             name: response.hits[name].recipe.label,
             ingredients: response.hits[name].recipe.ingredientLines,
@@ -79,6 +79,7 @@ $.ajax({
         };           
               
         addToFavorites();
+        
         //function to add to favorites for storage and other pages
         function addToFavorites(){
             var test = localStorage.getItem('food')
