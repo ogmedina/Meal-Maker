@@ -133,6 +133,11 @@ function removeFood(index) {
 function refreshPage() {
   location.reload();
 }
-food();
-drink();
+
+if (foodArray !== null) {
+  food();
+}
+if (drinksArray !== null) {
+  drink();
+}
 
