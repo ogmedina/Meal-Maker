@@ -62,3 +62,9 @@ hr.style-eight:after {
     padding: 15px;
     border-radius: 5px;
 }
+
+#mainHeader {
+    font-size: 94px;
+    text-decoration: underline;
+    border-style: solid;
+}
