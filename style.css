@@ -32,20 +32,161 @@ hr.style-eight:after {
     background: #333;
 }
 
+
+.menu a:hover{
+    background-color: black;
+    text-decoration: underline;
+    border-style: solid;
+    border-width: thin;
+
 .callout {
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     color: whitesmoke;
     margin-bottom: 0;
+
 }
 
-.button {
-    background-color: #fca311;
+.mainHeader {   
+     color: white;
+     background-image: url(./Images/background.jpeg); 
 }
 
-.food-pic1 {
-    width: 100%;
+.mainText h1 {
+    font-size: 94px;
+    text-decoration: underline;
+    border-style: solid;
 }
+
+
+body {
+    background-image: url(./Images/mainbackground.png);
+}
+
+.grid-x{
+    border-style: solid;
+    margin-bottom: 10px;
+    border-radius: 15px;  
+    background-color: white;  
+}
+
+#ingredientSection0{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+#ingredientSection1{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+#ingredientSection2{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+#ingredientSection3{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+#ingredientSection4{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+#ingredientSection5{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+#ingredientSection6{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+#ingredientSection7{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+#ingredientSection8{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+#ingredientSection9{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 639px) {
+    #saveBtn0 {
+      text-align: center;
+    }
+    #saveBtn1 {
+      text-align: center;
+    }
+    #saveBtn2 {
+      text-align: center;
+    }
+    #saveBtn3 {
+      text-align: center;
+    }
+    #saveBtn4 {
+      text-align: center;
+    }
+    #saveBtn5 {
+      text-align: center;
+    }
+    #saveBtn6 {
+      text-align: center;
+    }
+    #saveBtn7 {
+      text-align: center;
+    }
+    #saveBtn8 {
+      text-align: center;
+    }
+     #saveBtn9 {
+      text-align: center;
+    }
+
+    #ingredientSection0{    
+        text-align:center;
+    }    
+    #ingredientSection1{    
+        text-align:center;
+    }    
+    #ingredientSection2{       
+        text-align:center;
+    }
+    #ingredientSection3{        
+        text-align:center;
+    }
+    #ingredientSection4{      
+        text-align:center;
+    }
+    #ingredientSection5{        
+        text-align:center;
+    }
+    #ingredientSection6{       
+        text-align:center;
+    }
+    #ingredientSection7{        
+        text-align:center;
+    }    
+    #ingredientSection8{       
+        text-align:center;
+    }    
+    #ingredientSection9{        
+        text-align:center;
+    }
+  }
 
 #mainHeading {
     text-decoration: underline;
