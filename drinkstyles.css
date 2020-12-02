@@ -26,6 +26,8 @@ span {
 button {
     cursor: pointer;
     box-shadow: 0 3px #999;
+    background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
 }
 
 button:active{
