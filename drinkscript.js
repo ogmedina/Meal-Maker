@@ -10,6 +10,9 @@ var query = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 //event listeners
 $("#resultsContainer").on('click', function(event){
     event.preventDefault();
+    if(event.target.matches('.fa-heart')){
+        addToFavorites(globalDrinksArray[event.target.parentNode.dataset.index], event.target.parentNode.dataset.index)
+    }
     if(event.target.matches('.favoriteButton')){
         addToFavorites(globalDrinksArray[event.target.dataset.index], event.target.dataset.index)
     }
@@ -116,7 +119,7 @@ function searchDrink(queryURL) {
 
 
             newRow.append(description)
-            var newBtn = $('<button><i class="fas fa-heart"></i></button>')
+            var newBtn = $('<button><i class="fas fa-heart "></i></button>')
             newBtn.attr('class', 'button favoriteButton');
             newBtn.attr('data-index', i)
             
