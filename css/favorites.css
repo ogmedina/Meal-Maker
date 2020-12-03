@@ -15,7 +15,7 @@ h1{
     color: white;
 }
 
-h3{
+h2{
     text-align: center;
     color: white;
 }
@@ -70,7 +70,7 @@ button {
 	font-size:17px;
 	padding:9px 14px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #810e05;
+    text-shadow:0px 1px 0px #810e05;
 }
 button:hover {
 	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
@@ -93,4 +93,9 @@ button:active {
 .foodItem{
     padding-left: 170px;
     
+}
+
+.rowContainer {
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
