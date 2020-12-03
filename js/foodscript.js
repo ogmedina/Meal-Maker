@@ -53,11 +53,10 @@ $.ajax({
         //this saves the recipe into a variable called ingredientARR
         var ingredientARR = response.hits[i].recipe.ingredientLines;
         var ingredients = $("#ingredients" + i)
-        //this creates a button using fontawesome <i> and adds a heart and color   
-
-        var buttonEl = $('<button><i class = "fas fa-heart"></i></button>');
+        //this creates a button using fontawesome <i> and adds a heart and color
+        var buttonEl = $("<button><i class = 'fas fa-heart'" + "data-index=" + i + "></i></button>");
         buttonEl.attr('class', 'button favoriteButton');         
-        buttonEl.attr("data-name", [i])              
+        buttonEl.attr("data-index", i)              
         $("#saveBtn" + i).append(buttonEl);
 
         //this is a loop to create a list of ingredients and appends it
@@ -65,12 +64,10 @@ $.ajax({
              var ingredientList = $("<li>" + ingredientARR[j] + "</li>");             
              ingredients.append(ingredientList);
          }
-    }
-    //console.log(response.hits[0].recipe.ingredientLines);
-    //console.log(ingredientARR);    
+    }       
     //this waits for a click in the results container to save the button into an object called savedRecipe
-    $("#resultsContainer").on("click", function (e){
-        var name = $(e.target).data("name");        
+    $(".button").on("click", function (e){        
+        var name = $(e.target).data("index");        
         var savedRecipe = {
             name: response.hits[name].recipe.label,
             ingredients: response.hits[name].recipe.ingredientLines,
@@ -82,8 +79,7 @@ $.ajax({
         
         //function to add to favorites for storage and other pages
         function addToFavorites(){
-            var test = localStorage.getItem('food')
-            console.log(test);
+            var test = localStorage.getItem('food')            
             if(test === null){
                 var array = [];
                 array.push(savedRecipe);                
@@ -97,33 +93,3 @@ $.ajax({
     });
 });
 });
-
-//Need to copy or fix on click function to create objects
-//**********************************************
-//Need to store objects in local storage
-//need to make function for button image shift
-
-//fas fa-heart
-
-
-//$("#saveBtn0").on("click", function (e){
-    //var name = $(e.target).data("name");
-    //var savedRecipe = {
-        //name: response.hits[name].recipe.label,
-        //ingredients: response.hits[name].recipe.ingredientLines,
-        //link: response.hits[name].recipe.url,
-      //  img: response.hits[name].recipe.image
-    //};
-    //console.log(savedRecipe);
-  //  console.log("label : " + savedRecipe.name + " recipe : " + savedRecipe.ingredients + " sourceLink : " + savedRecipe.link);
-
-//});
-
-       //$("#saveBtn").removeClass("far fa-heart button alert");        
-        //$(this).addClass("far fa-heart button success");
-
-
-        
-        //var globalFoodArray = JSON.parse(localStorage.getItem('food'));
-        //globalFoodArray.push(savedRecipe);
-        //localStorage.setItem('food', JSON.stringify(globalFoodArray));
