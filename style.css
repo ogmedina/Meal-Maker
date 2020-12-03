@@ -5,7 +5,7 @@ main {
 }
 
 body {
-    background-color: gray;
+    background-image: url(./Images/mainbackground.png);
 }
 
 /*  Found on CSS tricks*/
@@ -17,7 +17,6 @@ hr.style-eight {
     color: white;
     text-align: center;
 }
-
 hr.style-eight:after {
     content: "§";
     display: inline-block;
@@ -25,28 +24,25 @@ hr.style-eight:after {
     top: -0.9em;
     font-size: 1.5em;
     padding: 0 0.25em;
-    background: gray;
+    background-image: url(./Images/mainbackground.png)
 }
-
-.menu {
-    background: #333;
-}
-
 .callout {
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     color: whitesmoke;
     margin-bottom: 0;
+    background-image: url(./Images/background.jpeg);
+}
+.menu {
+    background: #333;
 }
 
-.button {
-    background-color: #fca311;
+.menu a:hover{
+    background-color: black;
+    text-decoration: underline;
+    border-style: solid;
+    border-width: thin;
 }
-
-.food-pic1 {
-    width: 100%;
-}
-
 #mainHeading {
     text-decoration: underline;
     font-size: 45px;
@@ -65,4 +61,8 @@ hr.style-eight:after {
     border: 2px dashed black;
     padding: 15px;
     border-radius: 5px;
+}
+
+#mainHeader {
+    border-style: solid;
 }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/favorites.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap" rel="stylesheet">
+    <title>Favorites Menu</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="callout large">
+            <div id="mainHeader" class="row column text-center">
+                <h1><span id="mainHeading">Meal Maker</span></h1>
+                <p id="titleDescription">A place to find recipes for your favorite dishes and mixed drinks</p>
+            </div>
+        </div>
+    </header>
+
+    <ul class="menu expanded text-center">
+        <li><a href="index.html" style="color:white;">Home</a></li>
+        <li><a href="food.html" style="color:white;">Food</a></li>
+        <li><a href="drinks.html" style="color:white;">Drinks</a></li>
+        <li><a href="favorites.html" style="color:white;">Favorites</a></li>
+    </ul>
+
+    <div class="grid-x grid-padding-x">
+        <div class="large-12 medium-12 cell">
+            <h2>Your favorites!</h2>
+        </div>
+        <div class="large-12 medium-12 cell">
+            <hr class="style-eight">
+        </div>
+        <div class="large-6 medium-12 cell">
+            <div id="food"></div>
+        </div>
+        <div class="large-6 medium-12 cell">
+            <div id="drink"></div>
+        </div>
+    </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/favorites.js"></script>
+</body>
+
+</html>
