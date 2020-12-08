@@ -25,5 +25,6 @@ The following images demonstrate the application's functionality:
 MIT License
 
 ## Collaborators 
-   * [Jason McDonald](https://github.com/JasonMcD96)
    * [Matthew Marchand](https://github.com/marchandmr)
+   * [Jason McDonald](https://github.com/JasonMcD96)
+   
