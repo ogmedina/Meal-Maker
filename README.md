@@ -19,7 +19,7 @@ Meal Maker is an app for a user to search for meal and drink recipes. Using 3rd 
 The following images demonstrate the application's functionality:
 
 ## Screenshots
-![Demo](../Images/Meal Maker.gif)
+![Demo](https://github.com/ogmedina/Meal-Maker/blob/main/Images/Meal%20Maker.gif)
 
 ## License
 MIT License
